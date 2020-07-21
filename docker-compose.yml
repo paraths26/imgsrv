@@ -15,7 +15,7 @@ services:
       - "27017:27017"
   imgsrv:
     network_mode: bridge
-    build: imgsrv:test
+    image: imgsrv:test
     ports:
       - "80:80"
     volumes:
