@@ -21,3 +21,6 @@ services:
     volumes:
       - "./config.json:/config.json"
     command: ["/imgsrv"]
+    depends_on:
+      - mongodb
+      - kafka
