@@ -13,11 +13,11 @@ services:
     image: mongo
     ports:
       - "27017:27017"
-  # imgsrv:
-  #   network_mode: bridge
-  #   build: .
-  #   ports:
-  #     - "80:80"
-  #   volumes:
-  #     - "./config.json:/config.json"
-  #   command: ["/imgsrv"]
+  imgsrv:
+    network_mode: bridge
+    build: .
+    ports:
+      - "80:80"
+    volumes:
+      - "./config.json:/config.json"
+    command: ["/imgsrv"]
