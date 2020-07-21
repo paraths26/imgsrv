@@ -13,7 +13,7 @@ RUN GO111MODULE=on go mod download
 COPY . /app
 
 #Build app
-RUN GO111MODULE=on CGO_ENABLED=0 go build -v -o /bin/imgsrv
+RUN GO111MODULE=on  go build -v -o /bin/imgsrv
 
 #Stage-2 --> Copy app binary from previous stage
 FROM alpine:3.8
