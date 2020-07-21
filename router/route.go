@@ -18,7 +18,7 @@ func NewRouter() *gin.Engine {
 			})
 		})
 		api.PUT("/image", config.SrvHandler.Upload)
-		api.DELETE("/image/:album/:imgid", config.SrvHandler.Delete)
+		api.DELETE("/image/album/:album/:imgid", config.SrvHandler.Delete)
 		api.GET("/image/album/:albumid", config.SrvHandler.Album)
 		api.GET("/image/album/:albumid/:imgid", config.SrvHandler.Image)
 	}
